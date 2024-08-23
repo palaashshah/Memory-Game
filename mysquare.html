@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>WebDev Project</title>
+    <style>
+        :root{
+            --allports-rgb: 31 106 125;
+            --azalea-rgb: 249 192 196;
+            --asparagas-rgb: 123 160 91;
+            --amethyst-rgb: 153 102 204;
+        }
+
+        #grid-container{
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: repeat(10, 1fr);
+            gap: 2px;
+            width: 75vmin;
+            height: 75vmin;
+            margin: auto;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            left: 0;
+            right: 0;   
+            border: 1px solid black;
+        }
+
+        .name{
+            position: absolute;
+            bottom: 0px;
+            left: 0px;
+            z-index: 100;
+            padding: 1rem;
+            font-family: 'Yellowtail', cursive;
+            font-size: 1.25rem;
+            color: whitesmoke;
+        
+        }
+
+        #heading{
+            text-align: center;
+            text-decoration: underline;
+            z-index: 100;
+            padding: 1rem;
+            font-family: 'Yellowtail', cursive;
+            font-size: 2rem;
+            color: black;
+        }       
+
+        .simple-radial {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(#12A09F,#F39DD7);
+            z-index: -1;
+            
+        }
+
+        .tile {  
+            border: 1px solid rgb(255 255 255 / 25%);
+            transition: background-color 1500ms;
+        }
+
+        .tile:hover {
+        transition-duration: 0ms;
+        }
+
+        .tile:nth-child(4n):hover {
+        background-color: rgb(var(--allports-rgb));
+        }
+        
+        .tile:nth-child(4n + 1):hover {
+        background-color: rgb(var(--azalea-rgb));
+        }
+
+        .tile:nth-child(4n + 2):hover {
+        background-color: rgb(var(--asparagas-rgb));
+        }
+
+        .tile:nth-child(4n + 3):hover {
+        background-color: rgb(var(--amethyst-rgb));
+        }
+
+        .tile:nth-child(7n):hover {
+        background-color: rgb(var(--allports-rgb));
+        }
+        
+        .tile:nth-child(7n + 1):hover {
+        background-color: rgb(var(--azalea-rgb));
+        }
+
+        .tile:nth-child(7n + 2):hover {
+        background-color: rgb(var(--asparagas-rgb));
+        }
+
+        .tile:nth-child(7n + 3):hover {
+        background-color: rgb(var(--amethyst-rgb));
+        }
+
+        </style>
+</head>
+<body>
+    <div class="simple-radial"></div> <!-- creates the background radial gradient -->
+
+    <div id="grid-container"></div> <!-- creates the box in which the grids are -->
+
+    <div class="name">
+        Palash Shah · Paridhi Jain<br>
+        16014123035 · 16014123036
+    </div>
+
+    <div>
+        <h1 id="heading">Animated Tiles</h1>
+    </div>
+
+    <script>
+        const container = document.getElementById('grid-container');
+
+        // Create 100 tiles for the 10x10 grid
+        for (let i = 0; i < 100; i++) {
+            const tile = document.createElement('div');
+            tile.classList.add('tile');
+            container.appendChild(tile);
+        }
+    </script>
+    
+</body>
+</html>
