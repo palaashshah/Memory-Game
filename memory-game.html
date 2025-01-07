@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
+    <link rel="icon" href="favicon1.ico" type="image/x-icon">
+    <title>Memory Game</title>
+    <style>
+        body {
+            background-color: #100C08;
+            color: white;
+            font-family: 'Bungee Tint', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Position the heading on the same line as score and highscore */
+        #header {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 5%;
+            left: 0;
+            right: 0;
+            font-size: 3rem;
+            text-align: center;
+            color: white;
+        }
+
+        #grid-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-template-rows: repeat(6, 1fr);
+            gap: 2px; /* Reduced gap between tiles */
+            width: 60vmin;
+            height: 60vmin;
+            margin: auto;
+            padding: 10px;
+            position: absolute;
+            top: 15%; /* Adjusted position so it's below the header */
+            left: 0;
+            right: 0;
+            border: 1px solid #8A8A8A;
+        }
+
+        .tile {
+            border: 2px solid #8A8A8A;
+            background-color: rgb(255, 255, 255);
+            transition: background-color 500ms;
+        }
+
+        /* Adjust padding for highscore and score */
+        #highscore {
+            position: absolute;
+            top: 5%;
+            left: 10px; /* Align highscore to the left */
+            font-family: 'Bungee Tint', sans-serif;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+        }
+
+        #score {
+            position: absolute;
+            top: 5%;
+            right: 10px; /* Align score to the right */
+            font-family: 'Bungee Tint', sans-serif;
+            font-size: 1.2rem;
+            padding: 0.5rem;
+        }
+
+        #reset {
+            position: absolute;
+            top: 85%;
+            left: 50%;
+            transform: translateX(-50%);
+            padding: 10px 20px;
+            background-color: #FF6347;
+            border: none;
+            color: white;
+            font-size: 1rem;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #reset:hover {
+            background-color: #FF4500;
+        }
+
+        /* Style for names at bottom left with reduced padding */
+        .name {
+            position: absolute;
+            bottom: 10px;
+            left: 10px; /* Place at the bottom left */
+            text-align: left;
+            font-family: 'Yellowtail', cursive; /* Old font */
+            font-size: 1.7rem;
+            color: #ffffff;
+            padding: 0.2rem; /* Reduced padding */
+        }
+
+    </style>
+</head>
+<body>
+
+    <!-- Header section with heading in the middle, aligned with score and highscore -->
+    <div id="header">
+        Memory Game
+    </div>
+
+    <div id="highscore">Highscore: 0</div>
+    <div id="score">Score: 0</div>
+
+    <div id="grid-container"></div>
+    
+    <button id="reset">Reset Game</button>
+
+    <div class="name">
+        Palash Shah · Paridhi Jain<br>
+        16014123035 · 16014123036
+    </div>
+
+    <script src="memory-game.js"></script>
+</body>
+</html>
