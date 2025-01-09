@@ -39,7 +39,5 @@ A simple and interactive memory-based game created by @itzparidhi & @palaashshah
    ```
 
 3. Open the `index.html` file in your browser to play the game.
-<div class="photos">
-<a href="Github Profile url"> 
-  <img href="Github profile image source"> 
-</a> 
+
+##Authors
