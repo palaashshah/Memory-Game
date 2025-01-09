@@ -1,6 +1,6 @@
 # Memory Game
 
-A simple and interactive memory-based game created by @palaashshah and @itzparidhi using **HTML**, **CSS**, and **JavaScript**. Sharpen your memory skills by matching tiles of the same color while keeping track of your score and high score.
+A simple and interactive memory-based game created by @itzparidhi & @palaashshah using **HTML**, **CSS**, and **JavaScript**. Sharpen your memory skills by matching tiles of the same color while keeping track of your score and high score.
 
 ## Features
 
