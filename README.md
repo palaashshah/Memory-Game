@@ -39,5 +39,6 @@ A simple and interactive memory-based game created by @itzparidhi & @palaashshah
    ```
 
 3. Open the `index.html` file in your browser to play the game.
-
-##Authors
+<a href="https://github.com/palaashshah/Memory-Game/graphs/contributors">
+  <img src="https://contrib.rocks/image?repo=palaashshah/Memory-Game" />
+</a>
